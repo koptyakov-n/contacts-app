@@ -1,0 +1,108 @@
+$active: #2f80ed;
+$font: 'Montserrat', 'SF Pro Display', 'Roboto', 'Helvetica', 'Arial', sans-serif;
+html{
+    font-family: $font;
+}
+body{
+    font-size: 16px;
+    font-weight: 400;
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.body{
+    padding: 0 16px;
+    max-width: 540px;
+    margin: 0 auto;
+    width: 100%;
+}
+h1{
+    font-size: 20px;
+}
+.btn{
+    &[disabled]{
+        color: #bbb
+    }
+    cursor: pointer;
+    font-size: 16px;
+    font-family: $font;
+    &-clear{
+        border: none;
+        color: $active;
+        background: none;
+        padding: 10px 20px;   
+    }
+    &-fluid{
+        width: 100%;
+    }
+    &-danger{
+        color: #d12222;
+    }
+    &-remove{
+        width: 66px;
+        height: 66px;
+        border: none;
+        background-color: #f01111;
+        color: #ffffff;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &:hover{
+          background-color: #d00000;
+          transition: 0.1s ease background-color;
+        }
+    }
+}
+
+.input-group{
+    display: block;
+    margin-bottom: 24px;
+    & > label{
+        font-size: 12px;
+        opacity: 0.6;
+    }
+    & input{
+        font-family: $font;
+        padding: 10px 40px 8px 0;
+        font-size: 16px;
+        border: none;
+        border-bottom: 1px solid #eee;
+        color: $active;
+        width: 100%;
+        background: none;
+        &[disabled]{
+            color: #222;
+        }
+    }
+}
+
+.header{
+    background: #f5f5f5;
+    display: flex;
+    padding: 0;
+    font-size: 16px;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+    &-btn-wrapper{
+      min-width: 130px;
+    }
+    &-right{
+      text-align: right;
+    }
+    & h1{
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
